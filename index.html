@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Order App</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Jimmy's Diner</h1>
+            <h2>The best burgers and pizzas in town.</h2>
+        </header>
+        <main>
+            <div class="container">
+                <section id="menu-items" class="menu-items">
+
+                </section>
+                <section id="order-summary" class="order-summary">
+
+                </section>
+                <button id="complete-order-btn" class="complete-order-btn" role="button">Complete order</button>
+                <div id="modal-overlay" class="modal-overlay hidden">
+                    <section id="payment-checkout-modal" class="payment-checkout-modal">
+                        <p class="modal-title">Enter card details</p>
+                        <form class="payment-form">
+                            <input id="name" name="name"
+                                type="text"
+                                placeholder="Enter your name"
+                                required>
+                            <input id="card-number" name="card-number"
+                                type="number"
+                                placeholder="Enter card number"
+                                required>
+                            <input id="cvv" name="cvv"
+                                type="number"
+                                placeholder="Enter CVV"
+                                required>
+                            <button id="pay-btn" class="pay-btn" role="button">Pay</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
+
