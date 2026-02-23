@@ -14,16 +14,17 @@ document.addEventListener('click', function(e) {
     removeItem(e.target.dataset.removeItem)
   }
   else if (e.target.id === 'complete-order-btn') {
-    e.preventDefault()
     processOrder()
   }
   else if (e.target.id === 'modal-overlay') {
     modalOverlay.classList.add('hidden')
   }
-  else if (e.target.id === 'pay-btn') {
-    e.preventDefault()
-    completeOrder(document.getElementById('name').value)
-  }
+}
+)
+
+document.getElementById('payment-form').addEventListener('submit', function(e) {
+  e.preventDefault()
+  completeOrder(document.getElementById('name').value)
 })
 
 function addToOrder(productId) {
